@@ -34,5 +34,5 @@ export type WithClassName<Overridable = false> = Overridable extends false
     };
 
 export type NextPageComponent = NextComponentType & {
-  getLayout: (props: AppProps) => JSX.Element;
+  getLayout?: (props: AppProps) => JSX.Element;
 };
