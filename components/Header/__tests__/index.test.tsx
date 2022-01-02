@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import Header, { HeaderLink } from "..";
 import {
   getAllByRole,

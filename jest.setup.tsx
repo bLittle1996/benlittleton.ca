@@ -6,8 +6,12 @@ const ActualNextImage = NextImage.default;
 Object.defineProperty(NextImage, "default", {
   configurable: true,
   // eslint-disable-next-line react/display-name
-  value: (props: ImageProps) => <ActualNextImage {...props} unoptimized />,
+  value: (props: ImageProps) => (
+    <ActualNextImage {...props} unoptimized placeholder="empty" layout="fill" />
+  ),
 });
 
 // This isn't implemented in JSDOM so let's do it ourselves!
-HTMLElement.prototype.scrollIntoView = jest.fn();
+if (global.HTMLElement) {
+  HTMLElement.prototype.scrollIntoView = jest.fn();
+}

@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import { getByRole, render, screen } from "@testing-library/react";
 import Experience, { ExperienceProps, Tech } from "..";
 import { NonEmptyArray } from "../../../utils/types";
