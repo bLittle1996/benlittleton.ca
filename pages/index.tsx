@@ -2,11 +2,8 @@ import Experience from "../components/Experience";
 import ExperienceCarousel from "../components/Experience/ExperienceCarousel";
 import Link from "../components/Link";
 import jalupNextImage from "../images/projects/jalup-next.jpg";
-import tfhImage from "../images/projects/tagsforhope-landing.jpg";
 import nativsharkImage from "../images/projects/nativshark-landing.jpg";
-import { useCallback, useRef } from "react";
-
-const styles: any = {};
+import tfhImage from "../images/projects/tagsforhope-landing.jpg";
 
 export default function Home() {
   return (
