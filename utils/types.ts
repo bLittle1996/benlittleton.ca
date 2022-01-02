@@ -1,3 +1,6 @@
+import { NextComponentType } from "next";
+import type { AppProps } from "next/app";
+
 interface StaticImageData {
   src: string;
   height: number;
@@ -29,3 +32,7 @@ export type WithClassName<Overridable = false> = Overridable extends false
        */
       overrideClassName?: boolean;
     };
+
+export type NextPageComponent = NextComponentType & {
+  getLayout: (props: AppProps) => JSX.Element;
+};

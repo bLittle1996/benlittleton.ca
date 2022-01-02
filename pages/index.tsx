@@ -4,8 +4,10 @@ import Link from "../components/Link";
 import jalupNextImage from "../images/projects/jalup-next.jpg";
 import nativsharkImage from "../images/projects/nativshark-landing.jpg";
 import tfhImage from "../images/projects/tagsforhope-landing.jpg";
+import BenLittletonAppLayout from "../layouts/apps/ben-littleton-app-layout";
+import { NextPageComponent } from "../utils/types";
 
-export default function Home() {
+const HomePage: NextPageComponent = () => {
   return (
     <div>
       <article id="about" className="mb-8">
@@ -186,4 +188,8 @@ export default function Home() {
       </article>
     </div>
   );
-}
+};
+
+HomePage.getLayout = BenLittletonAppLayout;
+
+export default HomePage;
